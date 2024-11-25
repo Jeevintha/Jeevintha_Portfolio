@@ -1,0 +1,132 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+body{
+    font-family:"Noto Serif Ahom";
+    margin:0px;
+}
+
+.nav{
+    height:50px;
+    background: #14213d;
+    position: fixed;
+    width:100%;
+    top:0;
+}
+.nav-list{
+    display:flex;
+    justify-content:end;
+    align-items: center;
+    gap:40px;
+    height: 100%;
+    margin:0;
+    list-style: none;
+    padding-right: 20px;
+}
+
+.nav-a{
+    text-decoration: none;
+    color:#7a8b87;
+    font-weight:500;
+    font-size: 1.2em;
+    height:20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 2px;
+}
+
+main{
+    text-align: center;
+}
+
+#welcome-section{
+    height:100vh;
+    background: #09132b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+}
+#name{
+    font-size: 6rem;
+    color: #bee9e8;
+    font-weight:600;
+    letter-spacing: 5px;
+}
+#role{
+ color:rgb(158, 158, 158);
+ font-size: 1.75rem;
+ font-family:'Times New Roman', Times, serif;
+}
+.projects-section{
+    margin: 0px auto;
+    width: 100%;
+    background:#bee9e8;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+img{
+    height:200px;
+    width:100%;
+ }
+
+.project-title{
+   font-size:2rem;
+   font-weight:bolder;
+   padding:100px;
+   padding-bottom: 3px;
+   line-height: 40px;
+   color: #09132b;
+}
+
+.line{
+   
+    background-color: #09132b;
+    width:400px;
+    height:4px;
+    margin-bottom: 5rem;
+}
+
+.project-tiles-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.project-tile{
+    display:flex;
+    flex-direction: column;
+    border:5px white solid;
+    width:350px;
+    height:250px;
+    margin:20px;
+}
+
+.project-tile-a{
+    height:50px;
+    font-size:25px;
+    font-weight:600;
+    letter-spacing:3px;
+    text-decoration: none;
+    padding-top:10px;
+    background:#14213d;
+    color:white;
+
+}
+.contact-section{
+    height: 100vh;
+    background: #09132b;
+    color: #bee9e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
