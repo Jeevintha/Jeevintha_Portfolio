@@ -72,10 +72,15 @@ main{
     align-items: center;
 }
 
-img{
+.project-img{
     height:200px;
     width:100%;
- }
+    border-radius: 15px 15px 0 0;
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    -ms-border-radius: 15px 15px 0 0;
+    -o-border-radius: 15px 15px 0 0;
+}
 
 .project-title{
    font-size:2rem;
@@ -87,7 +92,6 @@ img{
 }
 
 .line{
-   
     background-color: #09132b;
     width:400px;
     height:4px;
@@ -103,22 +107,26 @@ img{
 .project-tile{
     display:flex;
     flex-direction: column;
-    border:5px white solid;
     width:350px;
     height:250px;
     margin:20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
 }
 
 .project-tile-a{
     height:50px;
     font-size:25px;
-    font-weight:600;
-    letter-spacing:3px;
+    font-weight:400;
+    letter-spacing:2px;
     text-decoration: none;
     padding-top:10px;
     background:#14213d;
     color:white;
-
+    border-radius: 0 0 15px 15px;
 }
 .contact-section{
     height: 100vh;
@@ -130,3 +138,12 @@ img{
     font-size: 3rem;
 }
 
+@media screen and (max-width:425px) {
+    .nav{
+        height:150px;
+    }
+    .project-tiles-container{
+        display:flex;
+        flex-direction: column;
+    }
+}
