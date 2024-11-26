@@ -63,6 +63,38 @@ main{
  font-size: 1.75rem;
  font-family:'Times New Roman', Times, serif;
 }
+.certificate-section{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top:50px;
+    background: #bee9e8;
+}
+.certificate-title{
+    font-size: 1.75rem;
+    margin: 25px;
+    padding:3px 5px 3px 5px;
+    color:#09132b;
+    font-weight:500;
+}
+.certificate-cont{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.certificate{
+    width: 80%;
+}
+.line-cert{
+    background-color: #09132b;
+    width:350px;
+    height:4px;
+    margin-bottom: 5rem;
+    margin:0 auto;
+    
+}
 .projects-section{
     margin: 0px auto;
     width: 100%;
