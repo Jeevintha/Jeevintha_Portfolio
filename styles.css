@@ -166,8 +166,37 @@ main{
     color: #bee9e8;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
+    font-size: 1rem;
+}
+#lwt{
     font-size: 3rem;
+}
+.contact-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#bee9e8;
+
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10px;
+    padding: 10px;
+}
+.link-name{
+    text-align: left;
+    color:#09132b;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-right: #09132b solid;
+    padding: 10px;
+}
+.links>a{
+    color:#09132b;
 }
 
 @media screen and (max-width:425px) {
