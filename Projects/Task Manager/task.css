@@ -6,7 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(135deg, #e0f2f1 0%, #b2dfdb 100%);
+    background: linear-gradient(135deg, #e0f2f1 0%, #b2dbdf 100%);
 }
 
 .container {
@@ -20,8 +20,8 @@ body {
 
 h2 {
     text-align: center;
-    color: #00796b;
-    margin-bottom: 25px;
+    color: #047ada;
+    margin: 25px;
     font-weight: 600;
 }
 
@@ -38,14 +38,14 @@ h2 {
 
 #input:focus {
     outline: none;
-    border-color: #009688;
-    box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.2);
+    border-color: #047ada;
+    box-shadow: 0 0 0 3px rgba(0, 90, 150, 0.2);
 }
 
 #btn {
     width: 100%;
     padding: 12px;
-    background-color: #009688;
+    background-color: #047ada;
     color: white;
     border: none;
     border-radius: 8px;
@@ -55,7 +55,7 @@ h2 {
 }
 
 .task{
-    border: solid 3px #009688;
+    border: solid 3px #047ada;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,6 +69,7 @@ h2 {
 .accessButtons{
     display: flex;
     justify-content: space-around;
+    background: #047ada;
 }
 
 .accessButtons>*{
@@ -76,39 +77,53 @@ h2 {
     color:white;
     font-size: 1.10rem;
     cursor: pointer;
-    margin-bottom: 5px;
+    margin: 5px 0;
 }
 .delete{
     background: rgb(255, 85, 85);
-    border-radius: 10px;
-
+    border-radius: 5px;
 }
 .done{
-    background: rgb(85, 255, 127);
-    border-radius: 10px;
+    background: rgb(22, 195, 66);
+    border-radius: 5px;
 }
 
 #btn:hover {
-    background-color: #00796b;
+    background-color: #047ada;
     transform: scale(1.02);
 }
 
 #taskList {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#taskList>*{
+    width: 100%;
+    margin:5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 #taskList h3 {
-    color: #00796b;
+    color: #047ada;
     text-align: center;
     margin-bottom: 15px;
 }
+
+
 
 #taskList p {
     background-color: #f1f8e9;
     padding: 10px 15px;
     margin-bottom: 10px;
     border-radius: 6px;
-    color: #2c3e50;
+    color: #047ada;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
@@ -119,29 +134,6 @@ h2 {
     -moz-transition: all 0.1s ease;
     -ms-transition: all 0.1s ease;
     -o-transition: all 0.1s ease;
-}
-
-#taskList p:hover {
-    background-color: #dcedc8;
-    transition: 0.1s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    -webkit-transition: 0.1s;
-    -moz-transition: 0.1s;
-    -ms-transition: 0.1s;
-    -o-transition: 0.1s;
-}
-
-
-
-#taskList p .delete-btn {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-    font-size: 14px;
 }
 
 @media (max-width: 480px) {
