@@ -12,10 +12,10 @@ function checker (){
     let reversedWord = word.split('').reverse().join('')
 
     if(word == reversedWord ){
-        output.innerText = word + "is a Palindrome"
+        output.innerText = word + " is a Palindrome"
     }
     else if (word != reversedWord){
-        output.innerText = word + "is NOT a Palindrome"
+        output.innerText = word + " is NOT a Palindrome"
     }
    }
    else{
