@@ -2,51 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Jeevintha | Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <nav id="navbar" class="nav">
       <ul class="nav-list">
-        <li>
-            <a class="nav-a" href="#welcome-section">About</a>
-        </li>
-        <li>
-            <a class="nav-a" href="#certificate">Certification</a>
-        </li>
-        <li>
-            <a class="nav-a" href="#projects">Work</a>
-        </li>
-        <li>
-            <a class="nav-a" href="#contact">Contact</a>
-        </li>
+        <li><a class="nav-a" href="#welcome-section">About</a></li>
+        <li><a class="nav-a" href="#certificate">Certifications</a></li>
+        <li><a class="nav-a" href="#projects">Projects</a></li>
+        <li><a class="nav-a" href="#contact">Contact</a></li>
       </ul>
     </nav>
     <main>
-    <section id="welcome-section" class="welcome-section">
-      <div id="name">Jeevintha</div>
-      <div id="role">a web developer</div>
-    </section>
-    
-    <section class="certificate-section" id="certificate">
-      <div class="certificate-title"> Proof of Work - Certifications
-      <div class="line-cert "></div></div>
-          <div class="certificate-cont">
-              <img src="./Certificate/RWD.jpg" class="certificate" alt="Responsive Web Design Certificate">
-          </div>
-      
-    </section>
+      <section id="welcome-section" class="welcome-section">
+          <h1 class="name">Jeevintha</h1>
+          <p class="role">Web Developer & Creator</p>
+      </section>
 
-    <section id="projects" class="projects-section">
-      <div class="project-title">These are some of my projects</div>
-      <div class="line"></div>
-      <div class="project-tiles-container">  
+      <section class="certificate-section" id="certificate">
+        <div class="section-title">Certifications</div>
+        <div class="certificate-cont">
+          <img src="./Certificate/RWD.webp" class="certificate" alt="Responsive Web Design Certificate">
+          <img src="./Certificate/JS DSA.webp" class="certificate" alt="JavaScript Algorithms Certificate">
+        </div>
+      </section>
 
+      <section id="projects" class="projects-section">
+        <div class="section-title">Projects</div>
+        <div class="project-tiles-container">
           <div class="project-tile">
-            <img src="./Media/task.jpg"  class="project-img" alt="Task Manager">
+            <img src="./Media/task.jpg" class="project-img" alt="Task Manager">
             <a href="./Projects/Task Manager/task.html" target="_blank" class="project-tile-a">Task Manager</a>
           </div>
           <div class="project-tile">
@@ -87,26 +77,17 @@
             <img src="./Media/FCC-1.jpg" class="project-img"  alt="Survey Form">
             <a href="./Projects/survey/survey.html" target="_blank" class="project-tile-a">Survey Form</a>
           </div>
-
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <div>
-        <div id="lwt">Let's work together...</div>
-      </div>
-      <div class="contact-links">
-          <div class="link-name">
-            <div>Email:</div>
-            <div class="linkedIn">linkedIn:</div>
-          </div>
-          <div class="links">
-            <a id="mail" href="mailto:jeevithajeevi6234@gmail.com">jeevithajeevi6234@gmail.com</a>
-              <a href="" id="profile-link" target="_blank">Jeevintha</a>
-          </div>
         </div>
-    </section>
+      </section>
 
-  </main>
+      <section id="contact" class="contact-section">
+        <div class="section-title">Contact Me</div>
+        <p class="contact-intro">Let's collaborate and create something amazing together!</p>
+        <div class="contact-links">
+          <p>Email: <a href="mailto:jeevithajeevi6234@gmail.com" id="mail">jeevithajeevi6234@gmail.com</a></p>
+          <p>LinkedIn: <a href="#" id="profile-link" target="_blank">Jeevintha</a></p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
