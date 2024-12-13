@@ -367,14 +367,7 @@
         <img src="./assets/amazon_logo.png" width="100" alt="">
         <p>@ 1996-224, Amazon.com, Inc.or its affiliates</p>
     </footer>
-    <script>
-        const scrollContainer = document.querySelectorAll('.products')
-        for (const item of scrollContainer) {
-            item.addEventListener('wheel', (evt)=>{
-                evt.preventDefault();
-                item.scrollLeft += evt.deltaY;
-        })}
-    </script>
+    <script src="product.js"></script>
 
 </body>
 </html>

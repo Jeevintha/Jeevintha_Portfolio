@@ -36,4 +36,3 @@ for (const item of scrollContainer) {
         item.scrollLeft += evt.deltaY;
     })
 }
-
