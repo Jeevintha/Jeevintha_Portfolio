@@ -1,21 +1,49 @@
-# Jeevintha's React Portfolio
+# 🚀 Jeevintha's React Portfolio
 
-Welcome to Jeevintha's React Portfolio! This project showcases my skills and projects built using React.
+<div align="center">
+  <img src="/public/Media/portfolio_prev.webp" alt="Portfolio Preview" width="100%"/>
+</div>
 
-## Features
+## 🌟 Overview
 
-- **Responsive Design**: Adapts to any screen size.
-- **Modern UI/UX**: Clean and intuitive user interface.
-- **Performance Optimized**: Fast loading times and smooth interactions.
+A modern, responsive portfolio website built with React, showcasing my projects and skills in web development. Features stunning animations, interactive components, and a sleek design.
 
-## Projects
+## ✨ Features
 
-1. **Project One**: A brief description of the first project.
-2. **Project Two**: A brief description of the second project.
-3. **Project Three**: A brief description of the third project.
+- **3D Bird Animation**: Interactive background using VANTA.js
+- **Smooth Animations**: Powered by Framer Motion
+- **Responsive Design**: Fully responsive across all devices
+- **Modern UI/UX**: Clean, intuitive interface with gradient accents
+- **Performance Optimized**: Fast loading and smooth interactions
 
-## Installation
+## 🛠️ Tech Stack
 
-To run this project locally, clone the repository and run `npm install` followed by `npm start`.
+- React 18
+- Tailwind CSS
+- Framer Motion
+- React Icons
 
-Thank you for visiting my portfolio!
+## 🔥 Projects Showcase
+
+1. **Super Fit**
+   - Fitness tracking application
+   - Tech: React, Tailwind CSS
+
+2. **Jeevizon**
+   - E-commerce platform
+   - Tech: HTML, CSS, JavaScript
+
+3. **Movie Buff**
+   - Movie database application
+   - Tech: JavaScript, Bootstrap
+
+4. **Spicy Hut**
+   - Restaurant website
+   - Tech: HTML, CSS, JavaScript
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/Jeevintha/Jeevintha_Portfolio.git
