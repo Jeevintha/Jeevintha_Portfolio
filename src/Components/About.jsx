@@ -4,12 +4,11 @@ const About = () => {
   return (
     <div id="about" className="text-white min-h-screen flex items-center justify-center p-8">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        
-        {/* Left Column - Image */}
+
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -90 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.8 }}
           className="relative w-3/4 mx-auto"
         >
           <div className="bg-gradient-to-tr from-blue-500 to-purple-500 rounded-2xl p-1">
@@ -21,9 +20,8 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* Right Column - Content */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 90 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="space-y-6"

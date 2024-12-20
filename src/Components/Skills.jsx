@@ -1,26 +1,31 @@
 import { motion } from "framer-motion";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub } from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaPython } from "react-icons/fa";
 import { SiTailwindcss, SiBootstrap } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
+import { VscVscode } from "react-icons/vsc";
 
 const skillCategories = [
   {
     title: "Frontend Development",
     skills: [
-      { name: "React.js", icon: <FaReact className="text-[#61DAFB]" /> },
-      { name: "HTML5", icon: <FaHtml5 className="text-[#E34F26]" /> },
-      { name: "CSS3", icon: <FaCss3Alt className="text-[#1572B6]" /> },
+      { name: "React Js", icon: <FaReact className="text-[#61DAFB]" /> },
+      { name: "HTML", icon: <FaHtml5 className="text-[#E34F26]" /> },
+      { name: "CSS", icon: <FaCss3Alt className="text-[#1572B6]" /> },
       { name: "JavaScript", icon: <FaJs className="text-[#F7DF1E]" /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+      { name: "Python", icon: <FaPython className="text-[#3776AB]" /> }
     ]
   },
   {
     title: "UI Frameworks and Tools",
     skills: [
-      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
       { name: "Bootstrap", icon: <SiBootstrap className="text-[#7952B3]" /> },
-      { name: "UI/UX Design", icon: <MdDesignServices className="text-[#FF7F50]" /> },
+      { name: "Vercel", icon: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAZ0lEQVR4AWMYwkBICI/krCm45eQ/ftfCKbnp//9FuOTsfv3//98Fh+TB/0BwELtc8H8wiMMqeRUieRWbXPF/KCjGIvkYJvkYU27KfzjoxAi4jwjJ7/KY/keA1ahy3E2dSKCJm2FEAQAD1l2xzdeQ1AAAAABJRU5ErkJggg==" alt="Vercel" className="w-8 h-8" /> },
       { name: "Git", icon: <FaGitAlt className="text-[#F05032]" /> },
+      { name: "UI/UX Design", icon: <MdDesignServices className="text-[#FF7F50]" /> },
+      { name: "VS Code", icon: <VscVscode className="text-blue-600" /> },
       { name: "GitHub", icon: <FaGithub className="text-white" /> },
+
     ]
   }
 ];
@@ -42,8 +47,8 @@ export default function Skills() {
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: idx * 0.2 }}
               className="p-6 rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800"
             >

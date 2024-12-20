@@ -17,3 +17,6 @@
         @apply hover:shadow-lg hover:shadow-current/20 transition-all duration-300;
       }
   }
+p,h1,h2,h3,h4,h5,h6 {
+    cursor: default;
+}

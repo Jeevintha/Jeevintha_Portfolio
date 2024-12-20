@@ -18,10 +18,12 @@ A modern, responsive portfolio website built with React, showcasing my projects 
 
 ## 🛠️ Tech Stack
 
-- React 18
+- React JS
 - Tailwind CSS
 - Framer Motion
-- React Icons
+- HTML
+- CSS
+- JavaScript
 
 ## 🔥 Projects Showcase
 

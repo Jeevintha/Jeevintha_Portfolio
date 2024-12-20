@@ -1,35 +1,5 @@
 import { motion } from "framer-motion";
-
-const projects = [
-  {
-    title: "Super Fit",
-    description: "A fitness app that helps you track your workouts, improvements and stay motivated.",
-    image: "/Media/superfit-preview.webp",
-    tech: ["React", "Tailwind CSS", ],
-    link: "https://github.com/yourusername/super-fit"
-  },
-  {
-    title: "Jeevizon",
-    description: "An interactive e-commerce platform where you can sign up and view products",
-    image: "/Media/amazon.webp",
-    tech: ["HTML", "CSS", "JavaScript"],
-    link: "https://github.com/yourusername/jeevizon"
-  },
-  {
-    title: "Movie Buff",
-    description: "A movie database app that has a collection of movie posters.",
-    image: "/Media/movieBuff.webp",
-    tech: ["JavaScript","Bootstrap","HTML", "CSS" ],
-    link: "https://github.com/yourusername/chatspace"
-  },
-  {
-    title: "Spicy Hut",
-    description: "A restaurant website that displays the menu and contact information.",
-    image: "/Media/Spicyhut.webp",
-    tech: ["HTML", "CSS", "JavaScript"],
-    link: "https://github.com/yourusername/devblog"
-  }
-];
+import projects from "./constants";
 
 const ProjectCard = ({ project, index }) => {
   return (
@@ -38,7 +8,7 @@ const ProjectCard = ({ project, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ y: -5 }}
-      className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 backdrop-blur-lg rounded-xl overflow-hidden border border-gray-800"
+      className="bg-gradient-to-br from-gray-900/50 to-gray-900/30 backdrop-blur-lg cursor-pointer rounded-xl overflow-hidden border border-gray-800"
     >
       <motion.div
         whileHover={{ scale: 1.05 }}
@@ -105,7 +75,7 @@ const Projects = () => {
           Here are some of my recent projects that showcase my skills in frontend development,
           user experience design, and problem-solving.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />

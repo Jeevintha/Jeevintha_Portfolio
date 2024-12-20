@@ -3,9 +3,9 @@ import { Vortex } from "../ui/vortex.jsx";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 const socialLinks = [
-  { icon: <FaGithub size={24} />, url: "https://github.com/yourusername", label: "GitHub" },
-  { icon: <FaLinkedin size={24} />, url: "https://linkedin.com/in/yourusername", label: "LinkedIn" },
-  { icon: <FaTwitter size={24} />, url: "https://twitter.com/yourusername", label: "Twitter" }
+  { icon: <FaGithub size={24} />, url: "https://github.com/Jeevintha", label: "GitHub" },
+  { icon: <FaLinkedin size={24} />, url: "https://www.linkedin.com/in/jeevintha-m-959677295/", label: "LinkedIn" },
+  { icon: <FaTwitter size={24} />, url: "https://x.com/jeevintha", label: "Twitter" }
 ];
 
 export default function Contact() {
