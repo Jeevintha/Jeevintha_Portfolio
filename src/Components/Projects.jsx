@@ -11,7 +11,7 @@ const projects = [
   {
     title: "Jeevizon",
     description: "An interactive e-commerce platform where you can sign up and view products",
-    image: "/Media/amazon.jpg",
+    image: "/Media/amazon.webp",
     tech: ["HTML", "CSS", "JavaScript"],
     link: "https://github.com/yourusername/jeevizon"
   },
