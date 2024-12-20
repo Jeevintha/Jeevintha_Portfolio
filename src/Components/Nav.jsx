@@ -36,7 +36,7 @@ export default function Nav() {
       transition={{
         duration: 0.2
       }}
-      className={` ${logoDisabled? 'fixed': 'hidden' } font-extrabold bg-black font-montez tracking-wider text-2xl z-50 fixed top-2 left-5`}>
+      className={` ${logoDisabled? 'fixed': 'hidden' } font-extrabold font-montez tracking-wider text-2xl z-50 fixed top-2 left-5`}>
         Jeevintha
       </motion.h1>
 
@@ -51,7 +51,7 @@ function Navbar({
   const [active, setActive] = useState(null);
   return (
     (<div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}>
+      className={cn("fixed top-10 inset-x-0 w-screen flex justify-center z-50", className)}>
       <Menu setActive={setActive}>
         <MenuItem setActive={setActive} active={active} item="Home" href="home">
           <div className="flex flex-col space-y-4 text-sm">

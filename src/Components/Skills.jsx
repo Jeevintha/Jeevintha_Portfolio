@@ -7,104 +7,69 @@ const skillCategories = [
   {
     title: "Frontend Development",
     skills: [
-      { name: "React.js", icon: <FaReact />, level: 90 },
-      { name: "HTML5", icon: <FaHtml5 />, level: 95 },
-      { name: "CSS3", icon: <FaCss3Alt />, level: 90 },
-      { name: "JavaScript", icon: <FaJs />, level: 85 },
+      { name: "React.js", icon: <FaReact className="text-[#61DAFB]" /> },
+      { name: "HTML5", icon: <FaHtml5 className="text-[#E34F26]" /> },
+      { name: "CSS3", icon: <FaCss3Alt className="text-[#1572B6]" /> },
+      { name: "JavaScript", icon: <FaJs className="text-[#F7DF1E]" /> },
     ]
   },
   {
-    title: "UI Frameworks",
+    title: "UI Frameworks and Tools",
     skills: [
-      { name: "Tailwind CSS", icon: <SiTailwindcss />, level: 90 },
-      { name: "Bootstrap", icon: <SiBootstrap />, level: 85 },
-    ]
-  },
-  {
-    title: "Tools & Version Control",
-    skills: [
-      { name: "Git", icon: <FaGitAlt />, level: 88 },
-      { name: "GitHub", icon: <FaGithub />, level: 90 },
-    ]
-  },
-  {
-    title: "Design",
-    skills: [
-      { name: "UI/UX Design", icon: <MdDesignServices />, level: 85 },
+      { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
+      { name: "Bootstrap", icon: <SiBootstrap className="text-[#7952B3]" /> },
+      { name: "UI/UX Design", icon: <MdDesignServices className="text-[#FF7F50]" /> },
+      { name: "Git", icon: <FaGitAlt className="text-[#F05032]" /> },
+      { name: "GitHub", icon: <FaGithub className="text-white" /> },
     ]
   }
 ];
 
-const SkillCard = ({ skill, index }) => {
+export default function Skills() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="relative bg-gradient-to-br from-gray-900/50 to-gray-900/30 backdrop-blur-lg p-6 rounded-xl border border-gray-800 group hover:border-purple-500/50 transition-all duration-300"
-    >
-      <div className="flex items-center gap-4 mb-4">
-        <div className="text-4xl text-purple-500 group-hover:scale-110 transition-transform duration-300">
-          {skill.icon}
-        </div>
-        <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
-      </div>
-      
-      <div className="relative h-2 bg-gray-700 rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: `${skill.level}%` }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="absolute top-0 left-0 h-full bg-gradient-to-r from-blue-500 to-purple-500"
-        />
-      </div>
-      <span className="text-sm text-gray-400 mt-2 inline-block">
-        {skill.level}%
-      </span>
-    </motion.div>
-  );
-};
+    <div id="skills" className="relative min-h-screen w-full bg-black py-20 px-4">
+      <div className="max-w-6xl mx-auto">
+        <motion.h2 
+          className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Technical Expertise
+        </motion.h2>
 
-const Skills = () => {
-  return (
-    <div id="skills" className="min-h-screen bg-black py-20 px-8">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-6xl mx-auto"
-      >
-        <h2 className="text-4xl font-bold text-center mb-4">
-          <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-            Technical Skills
-          </span>
-        </h2>
-        <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
-          My technical toolkit and expertise in various technologies
-        </p>
-
-        <div className="space-y-12">
-          {skillCategories.map((category, categoryIndex) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {skillCategories.map((category, idx) => (
             <motion.div
-              key={categoryIndex}
+              key={category.title}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: categoryIndex * 0.2 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: idx * 0.2 }}
+              className="p-6 rounded-2xl bg-gradient-to-br from-gray-900 to-black border border-gray-800"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6 pl-2 border-l-4 border-purple-500">
+              <h3 className="text-xl md:text-2xl font-semibold mb-6 text-gray-200">
                 {category.title}
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 gap-4">
                 {category.skills.map((skill, index) => (
-                  <SkillCard key={index} skill={skill} index={index} />
+                  <motion.div
+                    key={index}
+                    whileHover={{ scale: 1.05 }}
+                    className="flex flex-col items-center p-4 rounded-xl bg-black/50 backdrop-blur-sm border border-gray-800 hover:border-gray-700 transition-all duration-300"
+                  >
+                    <div className="text-4xl md:text-5xl mb-3 transition-transform duration-300 hover:scale-110">
+                      {skill.icon}
+                    </div>
+                    <span className="text-sm md:text-base text-gray-300">
+                      {skill.name}
+                    </span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
           ))}
         </div>
-      </motion.div>
+      </div>
     </div>
   );
-};
-
-export default Skills;
+}

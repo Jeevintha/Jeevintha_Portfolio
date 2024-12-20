@@ -3,30 +3,30 @@ import { motion } from "framer-motion";
 const projects = [
   {
     title: "Super Fit",
-    description: "A fitness tracking app built with React and Firebase. Features workout planning, progress tracking, and social sharing.",
-    image: "/super-fit.webp",
-    tech: ["React", "Firebase", "Tailwind CSS"],
+    description: "A fitness app that helps you track your workouts, improvements and stay motivated.",
+    image: "/Media/superfit-preview.webp",
+    tech: ["React", "Tailwind CSS", ],
     link: "https://github.com/yourusername/super-fit"
   },
   {
     title: "Jeevizon",
-    description: "An e-commerce platform with real-time inventory management and secure payment processing.",
-    image: "/jeevizon.webp",
-    tech: ["React", "Node.js", "MongoDB"],
+    description: "An interactive e-commerce platform where you can sign up and view products",
+    image: "/Media/amazon.jpg",
+    tech: ["HTML", "CSS", "JavaScript"],
     link: "https://github.com/yourusername/jeevizon"
   },
   {
-    title: "ChatSpace",
-    description: "Real-time chat application with end-to-end encryption and group chat capabilities.",
-    image: "/chatspace.webp",
-    tech: ["React", "Socket.io", "Express"],
+    title: "Movie Buff",
+    description: "A movie database app that has a collection of movie posters.",
+    image: "/Media/movieBuff.webp",
+    tech: ["JavaScript","Bootstrap","HTML", "CSS" ],
     link: "https://github.com/yourusername/chatspace"
   },
   {
-    title: "DevBlog",
-    description: "A modern blogging platform for developers with markdown support and code highlighting.",
-    image: "/devblog.webp",
-    tech: ["React", "GraphQL", "PostgreSQL"],
+    title: "Spicy Hut",
+    description: "A restaurant website that displays the menu and contact information.",
+    image: "/Media/Spicyhut.webp",
+    tech: ["HTML", "CSS", "JavaScript"],
     link: "https://github.com/yourusername/devblog"
   }
 ];

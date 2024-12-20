@@ -4,3 +4,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .bg-gradient {
+      @apply bg-gradient-to-r from-blue-500 to-purple-500;
+    }
+    
+    .text-gradient {
+      @apply bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent;
+    }
+    .skill-card-glow {
+        @apply hover:shadow-lg hover:shadow-current/20 transition-all duration-300;
+      }
+  }

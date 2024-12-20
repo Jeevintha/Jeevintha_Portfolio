@@ -109,7 +109,7 @@ export const Menu = ({
         duration: 0.2,
       }}
       onMouseLeave={() => setActive(null)}
-      className="relative rounded-full border bg-black border-white/[0.2] shadow-input max-w-[350px] mx-auto flex justify-center space-x-4 px-8 py-4 ">
+      className="relative rounded-full border bg-black border-white/[0.2] shadow-input max-w-[300px] mx-auto flex justify-center space-x-4 px-8 py-4 ">
       {children}
     </motion.nav>
     </AnimatePresence>)
