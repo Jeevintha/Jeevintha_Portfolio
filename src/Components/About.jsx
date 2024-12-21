@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 
+
 const About = () => {
+  
   return (
     <div id="about" className="text-white min-h-screen flex items-center justify-center p-8">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
@@ -69,6 +71,8 @@ const About = () => {
           </p>
         </motion.div>
       </div>
+
+      
     </div>
   );
 };
