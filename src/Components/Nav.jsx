@@ -72,9 +72,26 @@ function Navbar({ className }) {
         </MenuItem>
         <MenuItem setActive={setActive} active={active} item="Contact" href="contact">
           <div className="flex flex-col space-y-4 items-center text-sm">
-            <HoveredLink href="https://github.com/Jeevintha" target="_blank">Github</HoveredLink>
-            <HoveredLink href="mailto:jeevithajeevi6234@gmail.com">E-mail</HoveredLink>
-            <HoveredLink href="https://www.linkedin.com/in/jeevintha-m-959677295/" target="_blank">Linkedin</HoveredLink>
+            <HoveredLink 
+              href="https://github.com/Jeevintha" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Github
+            </HoveredLink>
+            <HoveredLink 
+              href="mailto:jeevithajeevi6234@gmail.com"
+              rel="noopener noreferrer"
+            >
+              E-mail
+            </HoveredLink>
+            <HoveredLink 
+              href="https://www.linkedin.com/in/jeevintha-m-959677295/" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Linkedin
+            </HoveredLink>
           </div>
         </MenuItem>
       </Menu>
