@@ -1,8 +1,5 @@
 import { motion } from "framer-motion";
 import projects from "./constants";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
-
 
 const ProjectCard = ({ project, index }) => {
   return (
@@ -18,7 +15,7 @@ const ProjectCard = ({ project, index }) => {
         className="relative h-48 overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent z-10" />
-        <LazyLoadImage
+        <img
           alt={project.title}
           src={project.image.src}
           className="w-full h-full object-cover"
