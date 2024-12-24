@@ -64,7 +64,6 @@ function Navbar({ className }) {
                   key={index}
                   title={project.title}
                   href={project.href}
-                  src={project.image}
                   description={project.shortDescription}
                 />
               ))

@@ -1,20 +1,24 @@
-import Nav from './Components/Nav'
-import Home from './Components/Home'
-import About from './Components/About'
-import Skills from './Components/Skills'
-import Projects from './Components/Projects'
-import Contact  from './Components/Contact'
+import { lazy, Suspense } from 'react'
+import LoadingComponent from "./Components/LoadingComponent";
+
+const Nav = lazy(() => import('./Components/Nav'))
+const Home = lazy(() => import('./Components/Home'))
+const About = lazy(() => import('./Components/About'))
+const Skills = lazy(() => import('./Components/Skills'))
+const Projects = lazy(() => import('./Components/Projects'))
+const Contact = lazy(() => import('./Components/Contact'))
 
 function App() {
-
   return (
     <div className='bg-black text-white overflow-x-hidden w-full'>
-      <Nav />
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <Suspense fallback={<LoadingComponent />}>
+        <Nav />
+        <Home />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </Suspense>
     </div>
   )
 }

@@ -5,7 +5,6 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import { cn } from "../lib/util";
 
 const transition = {
   type: "spring",
@@ -120,7 +119,6 @@ export const ProductItem = ({
   title,
   description,
   href,
-  src
 }) => {
   return (
     (<a
@@ -129,12 +127,6 @@ export const ProductItem = ({
         document.getElementById(href)?.scrollIntoView({ behavior: 'smooth' });
       }}
     className="flex justify-center gap-3 items-start flex-col space-x-2">
-      <img
-        src={src}
-        width={140}
-        height={70}
-        alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl" />
       <div>
         <h4 className="text-xl font-bold mb-1 text-white">
           {title}
