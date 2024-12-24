@@ -1,36 +1,35 @@
 import { cn } from "../lib/util";
-import React, { useEffect, useRef } from "react";
+import  { useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
 import { motion } from "framer-motion";
 
 export const Vortex = (props) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
-  const particleCount = props.particleCount || 150;
+  const particleCount =  40;
   const particlePropCount = 9;
   const particlePropsLength = particleCount * particlePropCount;
-  const rangeY = props.rangeY || 300;
+  const rangeY =  300;
   const baseTTL = 50;
   const rangeTTL = 150;
-  const baseSpeed = props.baseSpeed || 0.0;
-  const rangeSpeed = props.rangeSpeed || 1;
-  const baseRadius = props.baseRadius || 1;
-  const rangeRadius = props.rangeRadius || 2;
-  const baseHue = props.baseHue || 200;
+  const baseSpeed =  0.0;
+  const rangeSpeed =  1;
+  const baseRadius =  1;
+  const rangeRadius = 2;
+  const baseHue =  200;
   const rangeHue = 10;
   const noiseSteps = 3;
   const xOff = 0.00125;
   const yOff = 0.00125;
   const zOff = 0.0005;
-  const backgroundColor = props.backgroundColor || "#000000";
+  const backgroundColor =  "#000000";
   let tick = 0;
   const noise3D = createNoise3D();
   let particleProps = new Float32Array(particlePropsLength);
   let center = [0, 0];
 
-  const HALF_PI = 0.5 * Math.PI;
+
   const TAU = 2 * Math.PI;
-  const TO_RAD = Math.PI / 180;
   const rand = n => n * Math.random();
   const randRange = n => n - rand(2 * n);
   const fadeInOut = (t, m) => {
@@ -55,7 +54,6 @@ export const Vortex = (props) => {
 
   const initParticles = () => {
     tick = 0;
-    // simplex = new SimplexNoise();
     particleProps = new Float32Array(particlePropsLength);
 
     for (let i = 0; i < particlePropsLength; i += particlePropCount) {
@@ -171,8 +169,7 @@ export const Vortex = (props) => {
   };
 
   const resize = (
-    canvas,
-    ctx
+    canvas
   ) => {
     const { innerWidth, innerHeight } = window;
 
@@ -219,7 +216,7 @@ export const Vortex = (props) => {
         resize(canvas, ctx);
       }
     });
-  }, []);
+  }, [setup, resize]);
 
   return (
     (<div className={cn("relative h-screen w-screen", props.containerClassName)}>

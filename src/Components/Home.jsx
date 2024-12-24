@@ -21,12 +21,12 @@ const Home = () => {
         color2: 0x50acff,
         colorMode: "variance",
         birdSize: 1.20,
-        wingSpan: 18.00,
+        wingSpan: 10.00,
         speedLimit: 5.00,
         separation: 45.00,
         alignment: 25.00,
-        cohesion: 40.00,
-        quantity: window.innerWidth < 768 ? 2.00 : 3.00 // Reduce birds on mobile
+        cohesion: 30.00,
+        quantity: 3.00
       }))
     }
     return () => {
