@@ -2,12 +2,16 @@
   "jsc": {
     "parser": {
       "syntax": "ecmascript",
-      "jsx": true
+      "jsx": true,
+      "dynamicImport": true
     },
     "transform": {
       "react": {
-        "runtime": "automatic"
+        "runtime": "automatic",
+        "development": false,
+        "refresh": true
       }
-    }
+    },
+    "target": "es2015"
   }
 }

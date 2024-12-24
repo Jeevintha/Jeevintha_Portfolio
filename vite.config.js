@@ -4,13 +4,7 @@ import compression from 'vite-plugin-compression'
 
 export default defineConfig({
   plugins: [
-    react({
-      swcOptions: {
-        jsc: {
-          target: 'es2021',
-        }
-      }
-    }),
+    react(),
     compression()
   ],
   server: {
@@ -25,14 +19,23 @@ export default defineConfig({
     }
   },
   build: {
-    target: 'esnext',
+    target: 'es2015', // Changed from esnext for better compatibility
     minify: 'esbuild',
     rollupOptions: {
       output: {
-        manualChunks: {
-          'icons': ['react-icons/fa', 'react-icons/si', 'react-icons/md', 'react-icons/vsc']
+        manualChunks: (id) => {
+          if (id.includes('node_modules')) {
+            if (id.includes('react-icons')) {
+              return 'icons';
+            }
+            return 'vendor';
+          }
         }
       }
-    }
+    },
+    sourcemap: true
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion']
   }
 })

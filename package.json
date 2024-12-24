@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --mode production",
     "lint": "eslint .",
     "preview": "vite preview",
     "security-check": "npm audit",
     "clean": "rimraf dist",
-    "build:prod": "cross-env NODE_ENV=production npm run clean && vite build",
+    "build:prod": "npm run clean && vite build --mode production",
     "analyze": "source-map-explorer 'dist/assets/*.js'",
     "preload": "react-preload-images",
     "postbuild": "npm run analyze"
