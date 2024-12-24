@@ -1,7 +1,7 @@
 # 🚀 Jeevintha's React Portfolio
 
 <div align="center">
-  <img src="/public/Media/portfolio_prev.webp" alt="Portfolio Preview" width="100%"/>
+  <img src="/public/Media/portfolio_prev.jpeg" alt="Portfolio Preview" width="100%"/>
 </div>
 
 ## 🌟 Overview
