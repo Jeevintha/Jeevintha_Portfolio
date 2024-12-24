@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaPython } from "react-icons/fa";
 import { SiTailwindcss, SiBootstrap } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
-import { VscVscode } from "react-icons/vsc";
+import { VscFileCode } from "react-icons/vsc"; // Updated import
 import { useState } from "react";
 
 const CertificateModal = ({ isOpen, onClose, src }) => {
@@ -38,7 +38,7 @@ const skillCategories = [
       { name: "Vercel", icon: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAZ0lEQVR4AWMYwkBICI/krCm45eQ/ftfCKbnp//9FuOTsfv3//98Fh+TB/0BwELtc8H8wiMMqeRUieRWbXPF/KCjGIvkYJvkYU27KfzjoxAi4jwjJ7/KY/keA1ahy3E2dSKCJm2FEAQAD1l2xzdeQ1AAAAABJRU5ErkJggg==" alt="Vercel" className="w-8 h-8" /> },
       { name: "Git", icon: <FaGitAlt className="text-[#F05032]" /> },
       { name: "UI/UX Design", icon: <MdDesignServices className="text-[#FF7F50]" /> },
-      { name: "VS Code", icon: <VscVscode className="text-blue-600" /> },
+      { name: "VS Code", icon: <VscFileCode className="text-blue-600" /> }, // Updated icon
       { name: "GitHub", icon: <FaGithub className="text-white" /> },
 
     ]
