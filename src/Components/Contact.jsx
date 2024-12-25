@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
-import Stars from "./Stars";
 
 const socialLinks = [
   { icon: <FaGithub size={24} />, url: "https://github.com/Jeevintha", label: "GitHub" },
@@ -10,8 +9,10 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <div id="contact" className="relative w-full min-h-screen overflow-hidden bg-black">
-        <Stars />
+    <div id="contact" className="relative w-full min-h-screen overflow-hidden bg-black/50">
+      <div className="absolute inset-0 z-0">
+      </div>
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-black/50 to-black" />
       <div className="relative z-20 container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

@@ -1,11 +1,9 @@
 import { motion } from "framer-motion";
-import Stars from "./Stars";
 
 const Home = () => {
 
   return (
     <div id="home" className="relative min-h-screen w-full overflow-hidden">
-      <Stars />
       <motion.div
         className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10 w-full"
         initial={{ opacity: 0 }}

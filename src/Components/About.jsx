@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import Stars from "./Stars";
+
 
 const About = () => {
   
   return (
     <div id="about" className="text-white min-h-screen flex items-center justify-center p-8">
-      <Stars />
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
         <motion.div

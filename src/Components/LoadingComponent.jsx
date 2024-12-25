@@ -9,7 +9,6 @@ const LoadingComponent = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        {/* Loading Text */}
         <motion.h2 
           className="text-4xl font-bold bg-white bg-clip-text text-transparent"
           animate={{ 
@@ -43,7 +42,6 @@ const LoadingComponent = () => {
           ))}
         </div>
 
-        {/* Loading Bar */}
         <motion.div 
           className="w-48 h-1 bg-gray-800 rounded-full overflow-hidden"
         >

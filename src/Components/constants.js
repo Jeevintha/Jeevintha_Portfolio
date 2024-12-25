@@ -1,6 +1,9 @@
 const sanitizeURL = (url) => {
   try {
     const sanitized = new URL(url);
+    if (sanitized.protocol !== 'https:') {
+      return '#';
+    }
     return sanitized.href;
   } catch {
     return '#';
