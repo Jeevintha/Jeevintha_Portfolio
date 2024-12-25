@@ -1,50 +1,19 @@
 import { motion } from "framer-motion";
-import { useState, useEffect, useRef } from 'react'
+import Stars from "./Stars";
 
 const Home = () => {
-  const [vantaEffect, setVantaEffect] = useState(null)
-  const myRef = useRef(null)
 
-  useEffect(() => {
-    if (!vantaEffect && window.VANTA) {
-      setVantaEffect(window.VANTA.BIRDS({
-        el: myRef.current,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        backgroundColor: 0x000000,
-        color1: 0x34eded,
-        color2: 0x50acff,
-        colorMode: "variance",
-        birdSize: 1.20,
-        wingSpan: 10.00,
-        speedLimit: 5.00,
-        separation: 45.00,
-        alignment: 25.00,
-        cohesion: 30.00,
-        quantity: 3.00
-      }))
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
-
- return (
-  <div id="home" ref={myRef} className="relative min-h-screen w-full overflow-hidden">
-    <motion.div 
-      className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10 w-full"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
-    />
-      
+  return (
+    <div id="home" className="relative min-h-screen w-full overflow-hidden">
+      <Stars />
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-transparent to-black/50 z-10 w-full"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      />
       <motion.div className="relative z-20 flex flex-col justify-center items-center min-h-screen text-center w-full px-4">
-      <motion.h1 
+        <motion.h1 
           className="font-montez tracking-wider text-white text-5xl sm:text-7xl md:text-8xl lg:text-9xl mb-4"
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -86,7 +55,7 @@ const Home = () => {
         </motion.div>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

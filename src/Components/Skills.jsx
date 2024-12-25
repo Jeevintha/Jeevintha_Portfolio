@@ -5,6 +5,7 @@ import { MdDesignServices } from "react-icons/md";
 import { VscFileCode } from "react-icons/vsc";
 import { useState } from "react";
 import {SiFigma, SiMicrosoftoffice} from "react-icons/si";
+import Stars from "./Stars";
 
 const CertificateModal = ({ isOpen, onClose, src }) => {
   if (!isOpen) return null;
@@ -52,6 +53,7 @@ export default function Skills() {
   
   return (
     <div id="skills" className="relative min-h-screen w-full bg-black py-20 px-4">
+      <Stars />
       <div className="max-w-6xl mx-auto space-y-20">
      
         <div>

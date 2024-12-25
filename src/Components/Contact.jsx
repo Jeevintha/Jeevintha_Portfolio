@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { useEffect } from "react";
+import Stars from "./Stars";
 
 const socialLinks = [
   { icon: <FaGithub size={24} />, url: "https://github.com/Jeevintha", label: "GitHub" },
@@ -8,28 +8,11 @@ const socialLinks = [
   { icon: <FaTwitter size={24} />, url: "https://x.com/jeevintha", label: "Twitter" }
 ];
 
-const createSparkles = () => {
-  const container = document.querySelector('.sparkle-container');
-  for (let i = 0; i < 50; i++) {
-    const sparkle = document.createElement('div');
-    sparkle.className = 'sparkle';
-    sparkle.style.top = `${Math.random() * 100}%`;
-    sparkle.style.left = `${Math.random() * 100}%`;
-    sparkle.style.animationDelay = `${Math.random() * 1.5}s`;
-    container.appendChild(sparkle);
-  }
-};
-
 export default function Contact() {
-  useEffect(() => {
-    createSparkles();
-  }, []);
-
   return (
     <div id="contact" className="relative w-full min-h-screen overflow-hidden bg-black">
-      <div className="sparkle-container"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black" />
-      <div className="relative z-10 container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen">
+        <Stars />
+      <div className="relative z-20 container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

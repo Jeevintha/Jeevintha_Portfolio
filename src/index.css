@@ -20,39 +20,3 @@
 p,h1,h2,h3,h4,h5,h6 {
     cursor: default;
 }
-
-@keyframes sparkle {
-  0%, 100% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fallDown {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(200%);
-  }
-}
-
-.sparkle {
-  position: absolute;
-  width: 2px;
-  height: 3px;
-  border-radius: 50%;
-  background-color: rgb(95, 255, 255);
-  animation: sparkle 4s infinite, fallDown 4s infinite;
-}
-
-.sparkle-container {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
