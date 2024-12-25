@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "clean": "rimraf dist",
     "preload": "react-preload-images",
-    "postbuild": "npm run analyze"
+    "analyze": "source-map-explorer 'dist/**/*.js'"
   },
   "dependencies": {
     "clsx": "^2.1.1",

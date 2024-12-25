@@ -18,6 +18,7 @@ const ProjectCard = ({ project, index }) => {
         <img
           alt={project.title}
           src={project.image.src}
+          defer
           className="w-full h-full object-cover"
         />
       </motion.div>
