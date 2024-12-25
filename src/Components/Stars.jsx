@@ -6,7 +6,7 @@ const Stars = () => {
 
   useEffect(() => {
     const generateStars = () => {
-      return Array.from({ length: 50 }, (_, i) => ({
+      return Array.from({ length: 200 }, (_, i) => ({
         id: i,
         x: Math.random() * 250,
         y: Math.random() * 250,
@@ -19,7 +19,7 @@ const Stars = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 ">
+    <div className="fixed inset-0 h-full">
       {stars.map((star) => (
         <motion.div
           key={star.id}
@@ -32,13 +32,13 @@ const Stars = () => {
           }}
           initial={{ opacity: 0 }}
           animate={{
-            opacity: [0.2, 0.8, 0.2],
+            opacity: [0.2, 1, 0.2],
             scale: [1, 1.2, 1],
             x: [0, Math.random() * 250 - 25, 0],
             y: [0, Math.random() * 250 - 25, 0],
           }}
           transition={{
-            duration: 5 + Math.random() * 5,
+            duration: 5 + Math.random() * 2,
             repeat: Infinity,
             delay: Math.random() * 5,
           }}

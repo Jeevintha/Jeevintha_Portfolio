@@ -16,7 +16,7 @@ function App() {
   return (
 
       <div className='bg-black text-white overflow-x-hidden w-full relative'>
-        <Stars />
+        <Stars></Stars>
         <div className="relative z-[1]">
           <Suspense fallback={<LoadingComponent />}>
             <Nav />
