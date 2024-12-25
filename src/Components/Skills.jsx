@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaPython } from "react-icons/fa";
 import { SiTailwindcss, SiBootstrap } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
-import { VscFileCode } from "react-icons/vsc"; // Updated import
+import { VscFileCode } from "react-icons/vsc";
 import { useState } from "react";
+import {SiFigma, SiMicrosoftoffice} from "react-icons/si";
 
 const CertificateModal = ({ isOpen, onClose, src }) => {
   if (!isOpen) return null;
@@ -37,10 +38,11 @@ const skillCategories = [
       { name: "Bootstrap", icon: <SiBootstrap className="text-[#7952B3]" /> },
       { name: "Vercel", icon: <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAAAAABXZoBIAAAAZ0lEQVR4AWMYwkBICI/krCm45eQ/ftfCKbnp//9FuOTsfv3//98Fh+TB/0BwELtc8H8wiMMqeRUieRWbXPF/KCjGIvkYJvkYU27KfzjoxAi4jwjJ7/KY/keA1ahy3E2dSKCJm2FEAQAD1l2xzdeQ1AAAAABJRU5ErkJggg==" alt="Vercel" className="w-8 h-8" /> },
       { name: "Git", icon: <FaGitAlt className="text-[#F05032]" /> },
-      { name: "UI/UX Design", icon: <MdDesignServices className="text-[#FF7F50]" /> },
-      { name: "VS Code", icon: <VscFileCode className="text-blue-600" /> }, // Updated icon
+      { name: "UI/UX Design", icon: <MdDesignServices className="text-yellow-400" /> },
+      { name: "VS Code", icon: <VscFileCode className="text-blue-600" /> },
       { name: "GitHub", icon: <FaGithub className="text-white" /> },
-
+      { name: "Figma", icon: <SiFigma className="text-green-600" /> },
+      { name: "MS Office", icon: <SiMicrosoftoffice className="text-[#D83B01]" /> }
     ]
   }
 ];
@@ -78,8 +80,7 @@ export default function Skills() {
                   {category.skills.map((skill, index) => (
                     <motion.div
                       key={index}
-                      whileHover={{ scale: 1.05 }}
-                      className="flex flex-col items-center p-4 rounded-xl bg-black/50 backdrop-blur-sm border border-gray-800 hover:border-gray-700 transition-all duration-300"
+                      className="flex flex-col items-center p-4 rounded-xl bg-black/50 backdrop-blur-sm border border-gray-800 hover:bg-gray-900 hover:border-gray-700 transition-all duration-300"
                     >
                       <div className="text-4xl md:text-5xl mb-3 transition-transform duration-300 hover:scale-110">
                         {skill.icon}

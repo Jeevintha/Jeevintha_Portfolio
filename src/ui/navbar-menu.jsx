@@ -29,7 +29,6 @@ export const MenuItem = ({
       document.getElementById(href)?.scrollIntoView({ behavior: 'smooth' });
     }}
       onMouseEnter={() => {
-        console.log(`Mouse entered: ${item}`);
         setActive(item);
       }}
       href={`${href}`}

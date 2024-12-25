@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Vortex } from "../ui/vortex.jsx";
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { useEffect } from "react";
 
 const socialLinks = [
   { icon: <FaGithub size={24} />, url: "https://github.com/Jeevintha", label: "GitHub" },
@@ -8,16 +8,27 @@ const socialLinks = [
   { icon: <FaTwitter size={24} />, url: "https://x.com/jeevintha", label: "Twitter" }
 ];
 
+const createSparkles = () => {
+  const container = document.querySelector('.sparkle-container');
+  for (let i = 0; i < 50; i++) {
+    const sparkle = document.createElement('div');
+    sparkle.className = 'sparkle';
+    sparkle.style.top = `${Math.random() * 100}%`;
+    sparkle.style.left = `${Math.random() * 100}%`;
+    sparkle.style.animationDelay = `${Math.random() * 1.5}s`;
+    container.appendChild(sparkle);
+  }
+};
+
 export default function Contact() {
+  useEffect(() => {
+    createSparkles();
+  }, []);
+
   return (
     <div id="contact" className="relative w-full min-h-screen overflow-hidden bg-black">
-      <Vortex
-        backgroundColor="black"
-        className="absolute inset-0"
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black" />
-
-
+      <div className="sparkle-container"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-black" />
       <div className="relative z-10 container mx-auto px-4 py-20 flex flex-col items-center justify-center min-h-screen">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +44,6 @@ export default function Contact() {
           >
             Let's Connect
           </motion.h2>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -42,14 +52,13 @@ export default function Contact() {
           >
             <motion.a
               href="mailto:jeevithajeevi6234@gmail.com"
-              className="group relative inline-flex items-center gap-2 px-6 py-3 text-lg md:text-xl bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
+              className="group relative inline-flex items-center gap-2 px-6 py-3 text-lg md:text-xl bg-gradient-to-r from-blue-500 to-purple-500 rounded-full text-white hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-100"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <FaEnvelope className="text-xl" />
               <span>jeevithajeevi6234@gmail.com</span>
             </motion.a>
-
             <div className="flex flex-wrap justify-center gap-6 mt-8">
               {socialLinks.map((link, index) => (
                 <motion.a
@@ -68,11 +77,24 @@ export default function Contact() {
                 </motion.a>
               ))}
             </div>
+          <motion.a
+            href="/Jeevintha-cv.pdf"
+            download="Jeevintha-cv.pdf"
+            className="mt-8 group relative inline-flex items-center gap-2 px-6 py-3 text-lg md:text-xl bg-white/10 rounded-full text-white hover:shadow-md hover:bg-white/20 transition-all duration-100"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a2 2 0 002 2h14a2 2 0 002-2v-3" />
+            </svg>
+            <span>Resume</span>
+          </motion.a>
           </motion.div>
         </motion.div>
       </div>
-      </Vortex>
     </div>
-
   );
 }
