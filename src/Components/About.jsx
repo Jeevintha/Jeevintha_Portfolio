@@ -15,7 +15,7 @@ const About = () => {
         >
           <div className="bg-gradient-to-tr from-blue-500 to-purple-500 rounded-2xl p-1">
             <img
-              src="/girl.webp"
+              src="/Jeevintha_Portfolio/girl.webp"
               alt="Jeevintha"
               className="rounded-2xl object-cover w-full h-full"
             />
