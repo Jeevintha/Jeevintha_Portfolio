@@ -109,8 +109,8 @@ export default function Skills() {
 
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { src: "/Media/js.jpeg", alt: "JavaScript Certificate" },
-              { src: "/Media/rwd.jpeg", alt: "Responsive Web Design Certificate" }
+              { src: "/public/Media/js.jpeg", alt: "JavaScript Certificate" },
+              { src: "/public/Media/rwd.jpeg", alt: "Responsive Web Design Certificate" }
             ].map((cert, index) => (
               <motion.div
                 key={index}
