@@ -39,7 +39,7 @@ const projects = [
       src: "/Media/Spicyhut.jpeg",
     },
     tech: ["HTML", "CSS", "JavaScript"],
-    link: sanitizeURL("https://github.com/Jeevintha/html-css-projects")
+    link: sanitizeURL("https://github.com/Jeevintha/spicy-hut")
   },
   {
     title: "Task Management",
@@ -49,7 +49,7 @@ const projects = [
       src: "/Media/task.jpeg",
     },
     tech: ["JavaScript","HTML", "CSS" ],
-    link: sanitizeURL("https://github.com/Jeevintha/html-css-projects")
+    link: sanitizeURL("https://github.com/Jeevintha/task-management")
   },
 ].map(project => ({
   ...project,
