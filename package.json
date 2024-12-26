@@ -1,16 +1,13 @@
 {
-  "name": "jeevintha-portfolio",
+  "name": "jeevintha_portfolio",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Jeevintha/Jeevintha_Portfolio.git",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "clean": "rimraf dist",
-    "preload": "react-preload-images",
-    "analyze": "source-map-explorer 'dist/**/*.js'"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -24,6 +21,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
+    "gh-pages": "^5.0.0",
     "glob": "^9.3.5",
     "postcss": "^8.4.49",
     "rimraf": "^4.1.2",
