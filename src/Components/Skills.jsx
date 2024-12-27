@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaPython } from "react-icons/fa";
-import { SiTailwindcss, SiBootstrap } from "react-icons/si";
+import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub, FaPython,FaSass  } from "react-icons/fa";
+import { SiTailwindcss, SiBootstrap,SiJquery,SiFigma, SiMicrosoftoffice } from "react-icons/si";
 import { MdDesignServices } from "react-icons/md";
 import { VscFileCode } from "react-icons/vsc";
 import { useState } from "react";
-import {SiFigma, SiMicrosoftoffice} from "react-icons/si";
+
 
 
 const CertificateModal = ({ isOpen, onClose, src }) => {
@@ -30,7 +30,9 @@ const skillCategories = [
       { name: "CSS", icon: <FaCss3Alt className="text-[#1572B6]" /> },
       { name: "JavaScript", icon: <FaJs className="text-[#F7DF1E]" /> },
       { name: "Tailwind CSS", icon: <SiTailwindcss className="text-[#06B6D4]" /> },
-      { name: "Python", icon: <FaPython className="text-[#3776AB]" /> }
+      { name: "Python", icon: <FaPython className="text-[#3776AB]" /> },
+      { name: "jQuery", icon: <SiJquery className="text-[#0769AD]" /> },
+      { name: "SASS", icon: <FaSass className="text-[#CC6699]" /> },
     ]
   },
   {

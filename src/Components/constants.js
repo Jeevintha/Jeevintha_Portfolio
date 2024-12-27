@@ -56,4 +56,5 @@ const projects = [
   link: sanitizeURL(project.link)
 }));
 
-export default projects
+
+export default projects 
