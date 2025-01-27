@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import compression from 'vite-plugin-compression';
 
 export default defineConfig({
-  base: '/Jeevintha_Portfolio/', // Update this line
+  base: '/Jeevintha_Portfolio/',
   plugins: [
     react(),
     compression({
@@ -18,7 +18,15 @@ export default defineConfig({
           res.setHeader('X-Frame-Options', 'DENY');
           res.setHeader('X-XSS-Protection', '1; mode=block');
           res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
-          res.setHeader('Content-Security-Policy', "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;");
+          res.setHeader(
+            'Content-Security-Policy',
+            "default-src 'self'; " +
+            "script-src 'self' 'unsafe-inline' 'unsafe-eval'; " +
+            "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " +
+            "img-src 'self' data: https:; " +
+            "font-src 'self' https://fonts.gstatic.com; " +
+            "connect-src 'self' ws://localhost:*;"
+          );
           next();
         });
       }

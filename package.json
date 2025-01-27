@@ -2,7 +2,7 @@
   "name": "jeevintha_portfolio",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://Jeevintha.github.io/Jeevintha_Portfolio",
+  "homepage": "https://Jeevintha.vercel.app/Jeevintha_Portfolio/",
   "scripts": {
     "start": "vite",
     "build": "vite build",

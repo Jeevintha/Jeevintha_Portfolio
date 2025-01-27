@@ -1,15 +1,3 @@
-const sanitizeURL = (url) => {
-  try {
-    const sanitized = new URL(url);
-    if (sanitized.protocol !== 'https:') {
-      return '#';
-    }
-    return sanitized.href;
-  } catch {
-    return '#';
-  }
-};
-
 const projects = [
   {
     title: "Super Fit",
@@ -19,7 +7,7 @@ const projects = [
       src: "/Jeevintha_Portfolio/Media/superfit-preview.jpeg",
     },
     tech: ["React", "Tailwind CSS", ],
-    link: sanitizeURL("https://super-fit.vercel.app/")
+    link: "https://super-fit.vercel.app/"
   },
   {
     title: "Jeevizon",
@@ -29,7 +17,7 @@ const projects = [
       src: "/Jeevintha_Portfolio/Media/amazon.jpeg",
     },
     tech: ["HTML", "CSS", "JavaScript"],
-    link: sanitizeURL("https://jeevizon.vercel.app")
+    link: "https://jeevizon.vercel.app"
   },
   {
     title: "Spicy Hut",
@@ -39,7 +27,7 @@ const projects = [
       src: "/Jeevintha_Portfolio/Media/Spicyhut.jpeg",
     },
     tech: ["HTML", "CSS", "JavaScript"],
-    link: sanitizeURL("https://github.com/Jeevintha/spicy-hut")
+    link: "https://github.com/Jeevintha/spicy-hut"
   },
   {
     title: "Task Management",
@@ -49,12 +37,8 @@ const projects = [
       src: "/Jeevintha_Portfolio/Media/task.jpeg",
     },
     tech: ["JavaScript","HTML", "CSS" ],
-    link: sanitizeURL("https://github.com/Jeevintha/task-management")
+    link: "https://github.com/Jeevintha/task-management"
   },
-].map(project => ({
-  ...project,
-  link: sanitizeURL(project.link)
-}));
+]
 
-
-export default projects 
+export default projects
